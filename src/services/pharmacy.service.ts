@@ -4,6 +4,7 @@ import { BasePharmacy } from "../models/basePharmacy.model";
 import HealthMartPharmacy from "./healthMart.service";
 import { OrderModel } from "../models/order.model";
 import { PharmacyModel } from "../models/pharmacy.model";
+import CarePlusPharmacy from "./carePlus.service";
 
 export default class Pharmacy {
   constructor() {}
@@ -20,6 +21,8 @@ export default class Pharmacy {
     switch (pharmacyId) {
       case "healthmart":
         return new HealthMartPharmacy();
+      case "careplus":
+        return new CarePlusPharmacy();
       default:
         return null;
     }
