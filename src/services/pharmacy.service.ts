@@ -5,6 +5,7 @@ import HealthMartPharmacy from "./healthMart.service";
 import { OrderModel } from "../models/order.model";
 import { PharmacyModel } from "../models/pharmacy.model";
 import CarePlusPharmacy from "./carePlus.service";
+import QuickCarePharmacy from "./quickCare.service";
 
 export default class Pharmacy {
   constructor() {}
@@ -23,6 +24,8 @@ export default class Pharmacy {
         return new HealthMartPharmacy();
       case "careplus":
         return new CarePlusPharmacy();
+      case "quickcare":
+        return new QuickCarePharmacy();
       default:
         return null;
     }
