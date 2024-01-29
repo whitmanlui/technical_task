@@ -4,7 +4,8 @@
   "main": "src/app.ts",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/app.ts"
+    "start": "ts-node src/app.ts",
+    "test": "jest"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
@@ -23,5 +24,17 @@
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
